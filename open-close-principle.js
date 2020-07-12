@@ -1,3 +1,40 @@
+// need fix
+class Product {
+   /** product entities */
+}
+
+class ShippingOrderService {
+   checkout(product, type) {
+       switch (type) {
+           case ShippingType.JNE:
+               /** do checkout product with shipping type **/
+               break;
+           case ShippingType.TIKI:
+               /** do checkout product with shipping type **/
+               break;
+           case ShippingType.POSINDO:
+               /** do checkout product with shipping type **/
+               break;
+           default:
+               throw new TypeError("Unsupported shipping type")
+       }
+   }
+}
+
+const ShippingType = {
+   JNE: "jne",
+   TIKI: "tiki",
+   POSINDO: "posindo"
+};
+
+// fix
+class ShippingOrderService {
+   checkout(product, shipping) {
+       const costShipping = shipping.calculate(product);
+       /** Code to do check **/
+   }
+}
+
 class Shipping {
    constructor() {
        if(this.constructor === Shipping) {
@@ -15,19 +52,23 @@ class Shipping {
 
 class JNEShipping extends Shipping {
    calculate(product) {
-       return 100 * product;
+       return /** calculate amount of this type with product*/;
    }
 }
 
 class TIKIShipping extends Shipping {
    calculate(product) {
-       return 200 * product;
+       return /** calculate amount of this type with product*/;
    }
 }
 
-class ShippingOrderService {
-   checkout(product, shipping) {
-       var costShipping = shipping.calculate(product);
-       return costShipping;
+class POSINDOShipping extends Shipping {
+   calculate(product) {
+       return /** calculate amount of this type with product*/;
+   }
+}
+class SiCepatShipping extends Shipping {
+   calculate(product) {
+       return /** calculate amount of this type with product*/;
    }
 }

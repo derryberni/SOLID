@@ -8,6 +8,8 @@ Terbuka untuk ditambahkan adalah keadaan ketika sebuah sistem dapat ditambahkan 
 
 Secara umum, penggunaan aturan open/close diterapkan dengan memanfaatkan interface dan abstraksi kelas daripada menggunakan sebuah kelas konkret. Penggunaan interface dan abstraksi kelas bertujuan agar dapat mudah diperbaiki setelah pengembangan tanpa harus mengganggu kelas yang mewarisi dan ketika ingin membuat fungsionalitas baru, cukup dengan membuat kelas baru dan mewarisi interface atau abstraksi tersebut.
 
+Saat menerapkan open/close principle ke dalam project, kita bisa membatasi kebutuhan untuk mengubah kode yang telah ditulis, diuji dan di-debug. Tujuannya untuk menghindari resiko atau kelemahan sistem yang bisa saja terjadi. Selain itu, kita bisa menghindari ketergantungan dan meningkatkan fleksibilitas sistem. Tentunya ini akan meringankan proses skalabilitas dari sisi pengembangan perangkat lunak.
+
 # Liskov’s substitution
 Liskov’s substitution adalah aturan yang berlaku untuk hirarki pewarisan. Hal ini mengharuskan kita untuk mendesain kelas-kelas yang kita miliki sehingga ketergantungan antar klien dapat disubstitusikan tanpa klien mengetahui tentang perubahan yang ada. Oleh karena itu, seluruh SubClass setidaknya dapat berjalan dengan cara yang sama seperti SuperClass-nya.
 
